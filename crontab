@@ -1,4 +1,9 @@
 #Ansible: magento cron
 * * * * * /home/782476.cloudwaysapps.com/vhscetsrrx/public_html/bin/magento cron:run 2>&1 | grep -v "Ran jobs by schedule" >> /home/782476.cloudwaysapps.com/vhscetsrrx/public_html/var/log/magento.cron.log
 #Ansible: magento session
-0 4 * * * find /home/782476.cloudwaysapps.com/vhscetsrrx/public_html/var/session/ -type f -mtime +30 -delete > /dev/null 2>&1
+# 2023-11-21 Dmitrii Fediuk https://upwork.com/fl/mage2pro
+# 1) "Guest carts are cleared in 1 hour": https://github.com/cabinetsbay/site/issues/1
+# 2) https://stackoverflow.com/a/25599430
+# 3) https://pubs.opengroup.org/onlinepubs/9699919799/utilities/find.html
+# 4) Now session files are preserved for 2 years since the visitor's last visit.
+0 4 * * * find /home/782476.cloudwaysapps.com/vhscetsrrx/public_html/var/session/ -type f -mtime +730 -delete > /dev/null 2>&1
