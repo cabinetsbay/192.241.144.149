@@ -1,0 +1,1 @@
+Server sertings for [cabinetsbay.com](https://cabinetsbay.com) (Magento 2 on Cloudways).
