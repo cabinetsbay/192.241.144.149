@@ -1,0 +1,4 @@
+#Ansible: magento cron
+* * * * * /home/782476.cloudwaysapps.com/vhscetsrrx/public_html/bin/magento cron:run 2>&1 | grep -v "Ran jobs by schedule" >> /home/782476.cloudwaysapps.com/vhscetsrrx/public_html/var/log/magento.cron.log
+#Ansible: magento session
+0 4 * * * find /home/782476.cloudwaysapps.com/vhscetsrrx/public_html/var/session/ -type f -mtime +30 -delete > /dev/null 2>&1
