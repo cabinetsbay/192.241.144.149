@@ -4,7 +4,7 @@
 # 3) https://df.tips/tag/openssl-req
 # 4) https://www.sectigo.com/faqs/detail/OpenSSL-Apache-w-mod-ssl-NGINX-OS-X/kA01N000000rgRb
 openssl req \
-	-keyout .key \
+	-keyout ../.key \
 	-newkey rsa:2048 \
 	-nodes \
-	-out .csr
+	-out ../.csr
