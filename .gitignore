@@ -1,2 +1,4 @@
 # 2023-11-21 Dmitrii Fediuk https://upwork.com/fl/mage2pro
 /_my
+# 2024-04-20 "Update the TLS certificate": https://github.com/cabinetsbay/192.241.144.149/issues/2
+/certificate/.key
